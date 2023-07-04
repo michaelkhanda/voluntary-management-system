@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* CSS styling for the navigation bar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  .logo img {
+    max-width: 100%; /* Ensure the image doesn't exceed the container's width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Add some space between the logo image and text */
+  }
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 10px;
+}
+
+
+.menu li a {
+    text-decoration: none;
+    color: #333;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+}
+
+.button {
+    margin-left: 10px;
+}
+
+.signup-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 4px solid #000;
+    background: #28A745;
+}
+
+.login-btn {
+
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    background: #fff;
+
+    color: rgba(119, 119, 119, 0.47);
+    font-size: 16px;
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}
