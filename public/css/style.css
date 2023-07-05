@@ -1,3 +1,7 @@
+* {
+    font-family: 'Quicksand', sans-serif;
+  }
+  
 body {
     margin: 0;
     padding: 0;
@@ -10,7 +14,19 @@ body {
     justify-content: space-between;
     background-color: #fff;
     padding: 10px;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
 }
+
+.navbar li:hover {
+    background-color: #f0f0f0;
+    color: #333;
+    transform: rotateY(360deg);
+  }
+  
 
 .logo {
     display: flex;
@@ -37,6 +53,7 @@ body {
 
 .menu li {
     margin: 0 10px;
+    transition: transform 0.1s;
 }
 
 
@@ -77,3 +94,92 @@ body {
     line-height: normal;
 
 }
+
+/* End of navigation bar styling */
+
+/* CSS styling for the hero section */
+.hero {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .rectangle {
+    flex: 1;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .dark-blue {
+    background: #2E2E45;
+    position: relative;
+  }
+  
+  .content {
+    position: absolute;
+    top: 252px;
+    left: 40px;
+    color: white;
+    
+  }
+  
+  h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  h2 span.top {
+    display: block;
+  }
+  
+  h2 span.bottom {
+    display: block;
+  }
+  
+  
+  p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+
+  
+  
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+    margin-right: 300px;
+    margin-left: 100px;
+    
+  }
+  
+  .browseopp-btn {
+    background: #E34C45;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    text-decoration: none;
+    
+}
+
+.joinus-btn{
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    background: #28A745;
+}
+  
+  .browseopp-btn:hover {
+    background-color: #45a049;
+  }
+  
