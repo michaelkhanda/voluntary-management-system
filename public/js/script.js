@@ -1,11 +1,37 @@
-// script.js
+// JavaScript code
+const prevButton = document.querySelector('.prev-button');
+const nextButton = document.querySelector('.next-button');
+const messageContainer = document.querySelector('.message-container');
+const messages = document.querySelectorAll('.message');
 
-// Get the menu toggle button and mobile menu element
-const menuToggle = document.querySelector('.menu-toggle');
-const mobileMenu = document.querySelector('.mobile-menu');
+let currentIndex = 0;
 
-// Add a click event listener to the menu toggle button
-menuToggle.addEventListener('click', () => {
-  // Toggle the 'active' class on the mobile menu element
-  mobileMenu.classList.toggle('active');
+prevButton.addEventListener('click', () => {
+  if (currentIndex === 0) {
+    currentIndex = messages.length - 1;
+  } else {
+    currentIndex--;
+  }
+  updateSlider();
 });
+
+nextButton.addEventListener('click', () => {
+  if (currentIndex === messages.length - 1) {
+    currentIndex = 0;
+  } else {
+    currentIndex++;
+  }
+  updateSlider();
+});
+
+function updateSlider() {
+  messageContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+  messages.forEach((message, index) => {
+    if (index === currentIndex) {
+      message.classList.add('active');
+    } else {
+      message.classList.remove('active');
+    }
+  });
+}
