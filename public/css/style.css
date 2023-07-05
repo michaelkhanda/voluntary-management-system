@@ -34,6 +34,9 @@ body {
     font-weight: bold;
     font-family: 'Quicksand', sans-serif;
 }
+.logo:hover{
+    cursor: pointer;
+}
 
 .logo img {
     max-width: 100%;
@@ -54,7 +57,7 @@ body {
 }
 
 .menu li {
-    margin: 0 10px;
+    margin: 0 38px;
 }
 
 
@@ -62,15 +65,14 @@ body {
     text-decoration: none;
     color: #333;
     font-family: 'Quicksand', sans-serif;
-    font-weight: 500;
+    font-weight: 800;
 }
 
-.button {
+/* .button {
     margin-left: 10px;
-}
+} */
 
 .signup-btn {
-    background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -93,6 +95,7 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    margin-right: 10px;
 
 }
 
