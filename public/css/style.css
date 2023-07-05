@@ -206,7 +206,9 @@ p {
 
 /* How Volucare Works Styling */
 .how-it-works {
-    padding: 80px 0;
+    padding: 80px 140px;
+    height: 40vh;
+    
   }
   
   .how-it-works h2 {
@@ -254,5 +256,56 @@ p {
 /* End of How Volucare Works Styling */
 
 /* Meet our Community Styling */
+.community-section {
+    text-align: center;
+    background-color: aliceblue;
+    padding: 70px;
+  }
+  
+.community-section h2{
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color:#2E2E45;
+}
+  .community-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  .member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .member-image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+    object-position: center;
 
+  }
+  
+  .member-details {
+    margin-top: 10px;
+  }
+  
+  .member-details h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .member-details .member-message {
+    font-style: italic;
+    color: #666;
+  }
+  
 /* End of Meet our Community Styling */
