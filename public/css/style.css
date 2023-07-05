@@ -199,3 +199,54 @@ p {
 .browseopp-btn:hover {
     background-color: #b96170;
 }
+
+/* End of Hero Section Styling */
+
+/* How Volucare Works Styling */
+.how-it-works {
+    padding: 80px 0;
+  }
+  
+  .how-it-works h2 {
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color:#2E2E45;
+  }
+  
+  .steps-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    margin: auto;
+  }
+  
+  .steps-list li {
+    text-align: center;
+    flex-basis: 20%;
+  }
+  
+  .step-icon {
+    font-size: 40px;
+    color: #E34C45;
+    margin-bottom: 10px;
+  }
+  
+  .step-description h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2E2E45;
+  }
+  
+  .step-description p {
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 700;
+    color: #2E2E45;
+  }
+  
+/* End of How Volucare Works Styling */
