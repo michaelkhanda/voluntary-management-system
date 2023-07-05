@@ -28,7 +28,8 @@ body {
     font-weight: bold;
     font-family: 'Quicksand', sans-serif;
 }
-.logo:hover{
+
+.logo:hover {
     cursor: pointer;
 }
 
@@ -53,6 +54,7 @@ body {
 .menu li {
     margin: 0 38px;
     position: relative;
+    transition: transform 0.3s;
 }
 
 .menu li::before {
@@ -63,25 +65,25 @@ body {
     width: 0;
     height: 2px;
     background-color: #2E2E45;
-    transition: width 0.8s;
-  }
-  
-  .menu li:hover::before,
-  .menu li.active::before {
+    transition: width 0.3s;
+}
+
+.menu li:hover::before,
+.menu li.active::before {
     width: 100%;
-  }
+}
+
+.menu li:hover {
+    transform: scale(1.1);
+}
 
 .menu li a {
     text-decoration: none;
     color: #333;
     font-family: 'Quicksand', sans-serif;
     font-weight: 800;
-    
-}
 
-/* .button {
-    margin-left: 10px;
-} */
+}
 
 .signup-btn {
     color: white;
@@ -155,15 +157,12 @@ h2 span.bottom {
     display: block;
 }
 
-
 p {
     font-size: 18px;
     line-height: 1.5;
     margin-top: 40px;
     margin-bottom: 40px;
 }
-
-
 
 .hero-buttons {
     display: flex;
