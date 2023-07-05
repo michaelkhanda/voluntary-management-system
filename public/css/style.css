@@ -1,7 +1,7 @@
 * {
     font-family: 'Quicksand', sans-serif;
-  }
-  
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -24,9 +24,8 @@ body {
 .navbar li:hover {
     background-color: #f0f0f0;
     color: #333;
-    transform: rotateY(360deg);
-  }
-  
+}
+
 
 .logo {
     display: flex;
@@ -34,13 +33,16 @@ body {
     font-size: 24px;
     font-weight: bold;
     font-family: 'Quicksand', sans-serif;
-  }
-  
-  .logo img {
-    max-width: 100%; /* Ensure the image doesn't exceed the container's width */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 10px; /* Add some space between the logo image and text */
-  }
+}
+
+.logo img {
+    max-width: 100%;
+    /* Ensure the image doesn't exceed the container's width */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-right: 10px;
+    /* Add some space between the logo image and text */
+}
 
 .menu {
     list-style-type: none;
@@ -100,65 +102,65 @@ body {
 .hero {
     display: flex;
     height: 100vh;
-  }
-  
-  .rectangle {
+}
+
+.rectangle {
     flex: 1;
-  }
-  
-  .hero-image {
+}
+
+.hero-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+}
 
-  .dark-blue {
+.dark-blue {
     background: #2E2E45;
     position: relative;
-  }
-  
-  .content {
+}
+
+.content {
     position: absolute;
     top: 252px;
     left: 40px;
     color: white;
-    
-  }
-  
-  h2 {
+
+}
+
+h2 {
     font-size: 52px;
     font-weight: bold;
     margin-bottom: 20px;
-  }
-  
-  h2 span.top {
+}
+
+h2 span.top {
     display: block;
-  }
-  
-  h2 span.bottom {
+}
+
+h2 span.bottom {
     display: block;
-  }
-  
-  
-  p {
+}
+
+
+p {
     font-size: 18px;
     line-height: 1.5;
     margin-top: 40px;
     margin-bottom: 40px;
-  }
+}
 
-  
-  
-  .hero-buttons {
+
+
+.hero-buttons {
     display: flex;
     flex-direction: column;
     gap: 44px;
     margin-right: 300px;
     margin-left: 100px;
-    
-  }
-  
-  .browseopp-btn {
+
+}
+
+.browseopp-btn {
     background: #E34C45;
     color: white;
     padding: 10px 20px;
@@ -167,10 +169,10 @@ body {
     border-radius: 20px;
     text-decoration: none;
     font-size: 20px;
-    
+
 }
 
-.joinus-btn{
+.joinus-btn {
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
@@ -180,8 +182,7 @@ body {
     background: #28A745;
     font-size: 20px;
 }
-  
-  .browseopp-btn:hover {
+
+.browseopp-btn:hover {
     background-color: #b96170;
-  }
-  
+}
