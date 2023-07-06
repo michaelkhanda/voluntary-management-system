@@ -143,10 +143,10 @@ body {
 
 }
 
-h2 {
-    font-size: 52px;
+.hero h2 {
+    font-size: 60px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 h2 span.top {
@@ -157,8 +157,8 @@ h2 span.bottom {
     display: block;
 }
 
-p {
-    font-size: 18px;
+.hero p {
+    font-size: 28px;
     line-height: 1.5;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -252,6 +252,10 @@ p {
     font-weight: 700;
     color: #2E2E45;
   }
+
+  .how-it-works p{
+    font-size: 20px;
+  }
   
 /* End of How Volucare Works Styling */
 
@@ -307,5 +311,6 @@ p {
     font-style: italic;
     color: #666;
   }
+
   
 /* End of Meet our Community Styling */
