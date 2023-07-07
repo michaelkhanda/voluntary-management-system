@@ -209,55 +209,55 @@ h2 span.bottom {
 .how-it-works {
     padding: 80px 140px;
     height: 40vh;
-    
-  }
-  
-  .how-it-works h2 {
+
+}
+
+.how-it-works h2 {
     text-align: center;
     font-size: 60px;
     font-weight: bold;
     margin-bottom: 20px;
-    color:#2E2E45;
-  }
-  
-  .steps-list {
+    color: #2E2E45;
+}
+
+.steps-list {
     list-style-type: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 40px 0;
     margin: auto;
-  }
-  
-  .steps-list li {
+}
+
+.steps-list li {
     text-align: center;
     flex-basis: 20%;
-  }
-  
-  .step-icon {
+}
+
+.step-icon {
     font-size: 40px;
     color: #E34C45;
     margin-bottom: 10px;
-  }
-  
-  .step-description h3 {
+}
+
+.step-description h3 {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
     color: #2E2E45;
-  }
-  
-  .step-description p {
+}
+
+.step-description p {
     font-size: 16px;
     line-height: 1.4;
     font-weight: 700;
     color: #2E2E45;
-  }
+}
 
-  .how-it-works p{
+.how-it-works p {
     font-size: 20px;
-  }
-  
+}
+
 /* End of How Volucare Works Styling */
 
 /* Meet our Community Styling */
@@ -265,30 +265,31 @@ h2 span.bottom {
     text-align: center;
     background-color: aliceblue;
     padding: 50px;
-  }
-  
-.community-section h2{
+}
+
+.community-section h2 {
     text-align: center;
     font-size: 60px;
     font-weight: bold;
     margin-bottom: 20px;
-    color:#2E2E45;
+    color: #2E2E45;
 }
-  .community-members {
+
+.community-members {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
     margin-top: 30px;
-  }
-  
-  .member {
+}
+
+.member {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .member-image img {
+}
+
+.member-image img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
@@ -296,24 +297,24 @@ h2 span.bottom {
     overflow: hidden;
     object-position: center;
 
-  }
-  
-  .member-details {
+}
+
+.member-details {
     margin-top: 10px;
-  }
-  
-  .member-details h3 {
+}
+
+.member-details h3 {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 5px;
-  }
-  
-  .member-details .member-message {
+}
+
+.member-details .member-message {
     font-style: italic;
     color: #666;
-  }
+}
 
-  
+
 /* End of Meet our Community Styling */
 
 /* Start of Why Get Involved Styling */
@@ -321,55 +322,55 @@ h2 span.bottom {
 .why-get-involved-section {
     text-align: center;
     padding: 50px;
-  }
-  
-  .section-header {
+}
+
+.section-header {
     font-size: 60px;
     font-weight: normal;
     color: #2E2E45;
-    
-  }
-  
-  .bold-why {
+
+}
+
+.bold-why {
     font-weight: bold;
-  }
-  
-  .cards-container {
+}
+
+.cards-container {
     display: flex;
     justify-content: center;
     gap: 60px;
     margin-top: 70px;
-  }
-  
-  .card {
+}
+
+.card {
     width: 500px;
     padding: 60px;
     border-radius: 50px;
-    background-color:aliceblue;
+    background-color: aliceblue;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .card img {
+}
+
+.card img {
     width: 100%;
     height: auto;
     border-radius: 5px;
     margin-bottom: 15px;
-  }
-  
-  .card-title {
+}
+
+.card-title {
     font-size: 28px;
     margin-bottom: 10px;
-    color:#2E2E45;
-  }
-  
-  .card-description {
+    color: #2E2E45;
+}
+
+.card-description {
     font-size: 20px;
     color: #666;
     margin-bottom: 45px;
     font-weight: 500;
-  }
-  
-  .card-button-signup {
+}
+
+.card-button-signup {
     background-color: #4CAF50;
     color: #2E2E45;
     padding: 15px 25px;
@@ -378,9 +379,9 @@ h2 span.bottom {
     border-radius: 20px;
     font-size: 14px;
     font-weight: 500;
-  }
+}
 
-  .card-button{
+.card-button {
     background-color: #E34C45;
     color: #2E2E45;
     padding: 15px 25px;
@@ -389,8 +390,8 @@ h2 span.bottom {
     border-radius: 20px;
     font-size: 14px;
     font-weight: 500;
-  }
-  
+}
+
 
 /* End of Why Get Involved Styling */
 
@@ -404,44 +405,84 @@ h2 span.bottom {
     padding: 50px 0;
     text-align: center;
 }
-  
-  .footer-column {
-    display: inline-block;
+
+.footer-column {
+    /* display: inline-block;
+    margin: 0 40px;
+    flex: 1; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0 40px;
     flex: 1;
-  }
-  
-  .footer-heading {
+}
+
+.footer-heading {
     font-size: 20px;
     margin-bottom: 15px;
     font-weight: bold;
-  }
-  
-  .footer-links {
-    list-style: none;
+}
+
+.footer-links {
+
     padding: 0;
     margin: 0;
-  }
-  
-  .footer-links li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-links li {
+    display: inline-block;
+    position: relative;
     margin-bottom: 10px;
     font-size: 18px;
     transition: transform 0.3s;
-  }
-  
-  .footer-links a {
+}
+
+.footer-links li::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #E34C45;
+    transition: width 0.3s;
+}
+
+.footer-links li:hover::after {
+    width: 100%;
+}
+
+.footer-links li:hover {
+    transform: scale(1.1);
+}
+
+.footer-links a {
     color: #fff;
     text-decoration: none;
-  }
-  
-  .social-icons a {
+}
+
+.social-icons a {
     display: inline-block;
     margin-right: 10px;
     color: #E34C45;
-  }
-  
+    font-size: 30px;
+}
 
-  .footer h3{
-    font-size: 20px
-  }  
+.footer h3 {
+    font-size: 20px;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #ccc;
+    font-weight: 500;
+}
+
 /* End of Footer */
