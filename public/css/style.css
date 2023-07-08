@@ -419,9 +419,6 @@ h2 span.bottom {
 }
 
 .footer-column {
-    /* display: inline-block;
-    margin: 0 40px;
-    flex: 1; */
     display: flex;
     flex-direction: column;
     align-items: center;

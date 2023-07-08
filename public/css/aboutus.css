@@ -118,6 +118,7 @@ body {
 /* Start Hero Styling */
 .about-section {
     position: relative;
+    height: 100vh;
   }
   
   .image-container {
