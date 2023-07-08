@@ -1,0 +1,116 @@
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* CSS styling for the navigation bar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+.logo img {
+    max-width: 100%;
+    /* Ensure the image doesn't exceed the container's width */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-right: 10px;
+    /* Add some space between the logo image and text */
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 38px;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.menu li::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #2E2E45;
+    transition: width 0.3s;
+}
+
+.menu li:hover::before,
+.menu li.active::before {
+    width: 100%;
+}
+
+.menu li:hover {
+    transform: scale(1.1);
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #333;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 800;
+
+}
+
+.signup-btn {
+    color: #2E2E45;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 4px solid #000;
+    background: #28A745;
+    font-weight: 500;
+}
+
+.login-btn {
+
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    background: #fff;
+
+    color: rgba(119, 119, 119, 0.47);
+    font-size: 16px;
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: 1000;
+    line-height: normal;
+    margin-right: 30px;
+
+}
+
+/* End of navigation bar styling */
