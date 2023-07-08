@@ -114,3 +114,40 @@ body {
 }
 
 /* End of navigation bar styling */
+
+/* Start Hero Styling */
+.about-section {
+    position: relative;
+  }
+  
+  .image-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .description {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 48px;
+    font-weight: bold;
+  }
+  
+  .description .about {
+    display: block;
+  }
+  
+  .description .volucare {
+    display: block;
+    margin-top: 10px;
+  }
+  
+/* End Hero Styling */
