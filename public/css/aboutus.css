@@ -119,20 +119,20 @@ body {
 .about-section {
     position: relative;
     height: 100vh;
-  }
-  
-  .image-container {
+}
+
+.image-container {
     position: relative;
     overflow: hidden;
-  }
-  
-  .image-container img {
+}
+
+.image-container img {
     width: 100%;
     height: auto;
     display: block;
-  }
-  
-  .description {
+}
+
+.description {
     position: absolute;
     top: 40%;
     left: 180px;
@@ -140,20 +140,17 @@ body {
     color: #fff;
     font-size: 78px;
     font-weight: bold;
-  }
-  
-  .description .about {
+}
+
+.description .about {
     display: block;
-  }
-  
-  .description .volucare {
+}
+
+.description .volucare {
     display: block;
     margin-top: -30px;
-    color:#E34C45 ;
+    color: #E34C45;
     font-weight: 500;
-  }
-  
-/* End Hero Styling */
+}
 
-/* About Description Styling */  
-/* About Description Styling */
+/* End Hero Styling */
