@@ -212,6 +212,7 @@ body {
     font-weight: bold;
     margin-bottom: 20px;
     color: #2E2E45;
+    margin-top: -10px;
 }
 
 .steps-list {
