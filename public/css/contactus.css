@@ -165,7 +165,7 @@ body {
 
 /* End of About Hero Section Styling */
 
-/* How Volucare Works Styling */
+/* How to reach volucare Styling */
 .how-it-works {
     padding: 80px 140px;
     height: 40vh;
@@ -215,7 +215,7 @@ body {
     color: #2E2E45;
 }
 
-.step-description-icons a{
+.step-description-icons a {
     font-size: 30px;
     color: #666;
 }
@@ -227,15 +227,17 @@ body {
 }
 
 .email-link {
-    color:#E34C45; /* Change the color to your preference */
+    color: #E34C45;
+    /* Change the color to your preference */
     text-decoration: none;
-  }
-  
-  /* Style the link on hover */
-  .email-link:hover {
+}
+
+/* Style the link on hover */
+.email-link:hover {
     text-decoration: underline;
-  }
-/* End of How Volucare Works Styling */
+}
+
+/* End of How to reach volucare Styling */
 
 /* Start of Footer  */
 .footer {
