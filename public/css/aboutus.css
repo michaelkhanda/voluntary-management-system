@@ -251,6 +251,8 @@ body {
 
 .how-it-works p {
     font-size: 20px;
+    color: #666;
+    font-weight: normal;
 }
 
 /* End of How Volucare Works Styling */
