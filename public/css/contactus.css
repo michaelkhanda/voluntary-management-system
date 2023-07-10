@@ -117,3 +117,50 @@ body {
 }
 
 /* End of navigation bar styling */
+
+/* About Hero Section Styling */
+
+.about-hero-section {
+    position: relative;
+    width: 100%;
+    height: 120vh;
+    /* Set the height as per your requirements */
+}
+
+.hero-image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-hero-description {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    /* Adjust the left position as per your requirements */
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+.about-hero-description h2 {
+    font-size: 80px;
+    margin: 0;
+    font-weight: 1000;
+    color: #e34c45;
+}
+
+.about-hero-description h2 span {
+    display: block;
+    margin-top: -15px;
+    font-weight: normal;
+    color: white;
+}
+
+/* End of About Hero Section Styling */
