@@ -43,7 +43,7 @@ body {
     /* Maintain aspect ratio */
     margin-right: 10px;
     /* Add some space between the logo image and text */
-    
+
 }
 
 .menu {
@@ -86,7 +86,6 @@ body {
     color: #333;
     font-family: 'Quicksand', sans-serif;
     font-weight: 800;
-
 }
 
 .signup-btn {
