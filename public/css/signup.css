@@ -1,0 +1,44 @@
+.signup-section {
+	margin-top: 200px;
+}
+
+.signup-form {
+	max-width: 420px;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 200px;
+}
+
+.form-input {
+	border: none;
+	width: 400px;
+	margin: 10px 0;
+	padding: 5px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.form-input:focus {
+	outline: none;
+}
+
+#signup, #login {
+	display: inline-block;
+    color: #333;
+	cursor: pointer;
+	margin-top: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 14px 40px;
+    border-radius: 50px;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    min-width: 160px;
+    background: #fff;
+    border: 2px solid #333;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}

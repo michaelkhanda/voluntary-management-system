@@ -1,0 +1,55 @@
+.opp {
+	margin-top: 90px;
+	padding: 20px;
+}
+
+.opp-mid {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.opp-social {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fab, .fas {
+	color: #E34C45;
+}
+
+.opp-social i {
+	font-size: 40px;
+    padding: 5px;
+}
+
+.opp-bottom {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.opp-left {
+	width: 48%;
+    min-width: 360px;
+}
+
+.opp-right {
+	width: 48%;
+    min-width: 360px;
+}
+
+.opp-title {
+	color: #E34C45;
+    font-weight: 600;
+    border-bottom: 2px solid;
+    padding-bottom: 10px;
+}
+
+.loca-line {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	border-bottom: 1px solid #ddd;
+}

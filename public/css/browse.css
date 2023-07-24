@@ -1,0 +1,48 @@
+.browse {
+	margin-top: 120px;
+}
+
+.browse-cards {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 40px;
+}
+
+.browse-card {
+	max-width: 300px;
+	cursor: pointer;
+}
+
+.browse-img {
+	max-width: 300px;
+	margin-top: 20px;
+}
+
+.fas, .far {
+	color: #E34C45;
+}
+
+.browse-header {
+	display: flex;
+    gap: 10px;
+}
+
+.browse-header img {
+	border: 2px solid #000;
+    border-radius: 50%;
+    max-height: 50px;
+}
+
+.browse-title {
+	display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.browse-header p {
+	margin: 5px 0 5px;
+	color: #E34C45;
+}
+
