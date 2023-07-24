@@ -39,7 +39,6 @@ body {
 .logo img {
     max-width: 100%;
     height: auto;
-    /* Maintain aspect ratio */
     margin-right: 10px;
     /* Add some space between the logo image and text */
 }
