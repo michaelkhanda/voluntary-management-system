@@ -38,22 +38,23 @@
   <!-- Signup Form -->
   
   <section class="signup-section">
-    <form class="signup-form">
-	  <h3>Sign Up & Get ready to make an impact.</h3>
-	  <div class="form-fields">
-		  <input class="form-input" type="text" name="firstName" id="firstName" size=18 maxlength=50 placeholder="First Name *" required>
-		  <input class="form-input" type="text" name="lastName" id="lastName" size=18 maxlength=50 placeholder="Last Name *" required>
-		  <input class="form-input" type="email" name="email" id="email" size=18 maxlength=70 placeholder="Email *" required>
-		  <input class="form-input" type="password" name="password" id="password" minlength=8 placeholder="Password *" required>
-		  <p>Password must be at least 8 characters and include one number.</p>
-		  <input type="checkbox" id="subscribe" name="subscribe">
-		  <label for="subscribe"> I agree to the VoluCare Terms and Conditions.</label><br>
-		  <button type="submit" id="signup">SIGN UP</button>
-		  <p><a href="login.html" style="color: blue; font-weight: 600;">Log in</a> if you have an account</p>
-		  <span class="form-loader"></span>
-	  </div>
-	</form>
+    <form class="signup-form" action="/signup" method="POST">
+      <h3>Sign Up & Get ready to make an impact.</h3>
+      <div class="form-fields">
+        <input class="form-input" type="text" name="firstName" id="firstName" size=18 maxlength=50 placeholder="First Name *" required>
+        <input class="form-input" type="text" name="lastName" id="lastName" size=18 maxlength=50 placeholder="Last Name *" required>
+        <input class="form-input" type="email" name="email" id="email" size=18 maxlength=70 placeholder="Email *" required>
+        <input class="form-input" type="password" name="password" id="password" minlength=8 placeholder="Password *" required>
+        <p>Password must be at least 8 characters and include one number.</p>
+        <input type="checkbox" id="subscribe" name="subscribe">
+        <label for="subscribe"> I agree to the VoluCare Terms and Conditions.</label><br>
+        <button type="submit" id="signup">SIGN UP</button>
+        <p><a href="login.html" style="color: blue; font-weight: 600;">Log in</a> if you have an account</p>
+        <span class="form-loader"></span>
+      </div>
+    </form>
   </section>
+  
   
   <!-- End of Signup Form -->
 
@@ -97,6 +98,7 @@
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
   <script src="js/script.js"></script>
   <script src="js/signup.js"></script>
+  <script src="js/login.js"></script>
 </body>
 
 </html>

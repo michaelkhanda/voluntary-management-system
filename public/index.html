@@ -29,8 +29,8 @@
         <li><a href="contactus.html">CONTACT US</a></li>
       </ul>
       <div>
-        <button class="signup-btn">Sign Up</button>
-        <button class="login-btn">Login</button>
+        <button id="signup-btn" class="signup-btn">Sign Up</button>
+        <button id="login-btn" class="login-btn">Login</button>
       </div>
     </div>
   </section>
@@ -212,6 +212,34 @@
   </footer>
   <!-- End of Footer -->
   <script src="js/script.js"></script>
+  <script src="js/signup.js"></script>
+  <script src="js/login.js"></script>
+
+
+  <!-- Your index.html content here -->
+
+<!-- Add a div to display the user's name -->
+<div id="user-name-container">
+  <!-- The content will be dynamically updated with the user's name -->
+</div>
+
+<!-- Your other content here -->
+
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get the user's name from the cookie
+    const userName = Cookies.get("user_name");
+
+    // Check if the user's name exists in the cookie
+    if (userName) {
+      // If the user's name exists, display it instead of the "Sign Up" and "Login" buttons
+      const userNameContainer = document.getElementById("user-name-container");
+      userNameContainer.textContent = `Welcome, ${userName}!`;
+    }
+  });
+</script>
+
 </body>
 
 </html>

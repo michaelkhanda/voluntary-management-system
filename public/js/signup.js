@@ -1,39 +1,70 @@
-$(document).ready(function () {
-	// Listen to form submit event
-	$(".signup-form").submit(function(e) {
-		e.preventDefault();
-		// Capture input data
-		let fname = $("#firstName").val();
-		let lname = $("#lastName").val();
-		let email = $("#email").val();
-		let paswd = $("#password").val();
-		
-		// Create a function for validating email
-		function isEmail(email) {
-			var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-			return regex.test(email);
-		}
-		
-		// Validate all input fields
-		if (fname != "" && lname != "" && isEmail(email) && paswd != "") {
-			if ($('input#subscribe').is(':checked')) {
-				$("#signup").css({"pointer-events":"none","cursor":"default"}).text("SIGNING UP •••");
-				// Submit input data to database using the jQuery Load function
-				$(".form-loader").load("php/signup.php", {
-					fname: fname,
-					lname: lname,
-					email: email,
-					paswd: paswd
-				}, function() {
-					$("#signup").text("ALREADY SIGNED UP");
-				});
-			} else {
-				alert("Please accept the Terms and Conditions");
-			}
-		} else {
-			alert("Please enter a valid email address");
-		}
-		
-		
-	});
-});
+const { MongoClient } = require("mongodb");
+
+// MongoDB connection string
+const uri = "mongodb://localhost:27017/volucare"; // Replace this with your MongoDB connection string
+
+// Function to handle sign-up form submission
+async function handleSignUpFormSubmit(event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  // Get form data
+  const form = event.target;
+  const formData = new FormData(form);
+  const firstName = formData.get("firstName");
+  const lastName = formData.get("lastName");
+  const email = formData.get("email");
+  const password = formData.get("password");
+  // Add any additional form fields you may have
+
+  // Perform input field validation
+  if (!isValidName(firstName)) {
+    alert("Please enter a valid first name.");
+    return;
+  }
+
+  if (!isValidName(lastName)) {
+    alert("Please enter a valid last name.");
+    return;
+  }
+
+  if (!isValidEmail(email)) {
+    alert("Please enter a valid email address.");
+    return;
+  }
+
+  if (!isValidPassword(password)) {
+    alert("Please enter a valid password. It must be at least 8 characters long and contain one number.");
+    return;
+  }
+
+  try {
+    // Process the form data and send it to the server
+    const response = await fetch('/signup', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ firstName, lastName, email, password }),
+    });
+
+    // Parse the response JSON
+    const data = await response.json();
+
+    // Check if the server response indicates success
+    if (response.status === 200) {
+      // Show an alert for successful signup
+      alert(data.message);
+
+      // Redirect the user to the homepage (index.html) after successful signup
+      window.location.href = "index.html";
+    } else {
+      // Show an alert for any error message from the server
+      alert(data.error);
+    }
+  } catch (error) {
+    console.error("Error connecting to server:", error);
+    // Handle the error
+  }
+}
+
+// Rest of the validation functions remain the same as before

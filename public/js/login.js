@@ -1,29 +1,33 @@
-$(document).ready(function () {
-	// Listen to form submit event
-	$(".login-form").submit(function(e) {
-		e.preventDefault();
-		
-		let email = $("#email").val();
-		let paswd = $("#password").val();
-		
-		$(".form-loader").load("php/login.php", {
-			email: email,
-			paswd: paswd
-		}, function() {
-			if ($(".user-fname").length != 0) {
-				$("#login").text("ALREADY LOGGED IN");
-				$(".login-btn a").text($(".user-fname").text()).attr("href", "http://www.zigglor.xyz/works/volucare");
-				Cookies.set('fname', $(".user-fname").text(), { expires: 7 });
-				Cookies.set('email', email, { expires: 7 });
-				window.location.replace("http://www.zigglor.xyz/works/volucare");
-				return false; 
-			} else if ($(".invalid-paswd").length != 0) {
-				alert("You have entered an invalid password");
-				return false; 
-			} else if ($(".absent-user").length != 0) {
-				alert("The account was not found");
-				return false; 
-			}
-		});
-	});
-});
+document.addEventListener("DOMContentLoaded", function () {
+	const loginForm = document.querySelector(".login-form");
+	loginForm.addEventListener("submit", handleLoginSubmit);
+  });
+  
+  function handleLoginSubmit(event) {
+	event.preventDefault();
+  
+	const emailInput = document.getElementById("email");
+	const passwordInput = document.getElementById("password");
+  
+	const email = emailInput.value.trim();
+	const password = passwordInput.value.trim();
+  
+	// Perform any validation you want here
+	// For example, check if email and password are not empty
+	if (email === "" || password === "") {
+	  alert("Please enter both email and password.");
+	  return;
+	}
+  
+	// Replace this block with your actual login logic
+	// For now, we'll just assume the login is successful and set a user name
+	const userName = "John Doe";
+  
+	// Store the user's name in a cookie
+	Cookies.set("user_name", userName);
+  
+	// Redirect the user to index.html after successful login
+	window.location.href = "index.html";
+  }
+  
+  
