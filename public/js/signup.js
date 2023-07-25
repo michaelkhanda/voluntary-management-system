@@ -63,5 +63,3 @@ async function handleSignUpFormSubmit(event) {
     // Handle the error
   }
 }
-
-// Rest of the validation functions remain the same as before
