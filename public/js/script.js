@@ -29,6 +29,42 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  // Get the user's name from the cookie
+  const userName = Cookies.get("user_name");
+
+  // Check if the user's name exists in the cookie
+  if (userName) {
+    // If the user's name exists, display it instead of the "Sign Up" and "Login" buttons
+    const userNameContainer = document.getElementById("user-name-container");
+    userNameContainer.textContent = `Welcome, ${userName}!`;
+
+    // Add a click event listener to the user's name container to handle sign-out
+    userNameContainer.addEventListener("click", handleSignOut);
+  }
+});
+
+function handleSignOut() {
+  // Remove the user's name cookie to sign them out
+  Cookies.remove("user_name");
+
+  // Redirect the user to the login page after signing out (you can change the URL as needed)
+  window.location.href = "login.html";
+}
+
+// Function to show the "Sign Up" and "Login" buttons
+function showSignUpAndLoginButtons() {
+  const userNameContainer = document.getElementById("user-name-container");
+  userNameContainer.textContent = ""; // Clear the user's name container
+  const signUpBtn = document.getElementById("signup-btn");
+  const loginBtn = document.getElementById("login-btn");
+  signUpBtn.style.display = "inline-block"; // Show the "Sign Up" button
+  loginBtn.style.display = "inline-block"; // Show the "Login" button
+}
+
+// Call this function on page load to ensure the "Sign Up" and "Login" buttons are displayed correctly
+showSignUpAndLoginButtons();
+
 
 // Function to handle Sign Up button click
 function handleSignup() {
