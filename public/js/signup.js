@@ -54,9 +54,6 @@ async function handleSignUpFormSubmit(event) {
     if (response.status === 200) {
       // Show an alert for successful signup
       alert(data.message);
-
-      // Redirect the user to the homepage (index.html) after successful signup
-      window.location.href = "index.html";
     } else {
       // Show an alert for any error message from the server
       alert(data.error);

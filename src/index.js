@@ -44,7 +44,7 @@ app.post('/signup', async (req, res) => {
     // Save the user to the database
     await newUser.save();
 
-    // Redirect the user to the homepage (index.html) after successful signup
+    // Redirect the user to the homepage (login.html) after successful signup
     res.redirect('http://localhost:3000/login.html');
   } catch (err) {
     // If an error occurs, respond with an error message
