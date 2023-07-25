@@ -27,8 +27,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Serve static files from the 'public' folder
 app.use(express.static('public'));
 
-// Handle form submission
-// Handle form submission
+
 // Handle form submission
 app.post('/signup', async (req, res) => {
   try {
