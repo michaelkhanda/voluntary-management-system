@@ -81,11 +81,9 @@ function handleLogin() {
 // Function to handle Browse Opportunities button click
 function handleBrowseOpportunities() {
   // Replace this with your desired action for Browse Opportunities
-  alert("Browse Opportunities button clicked!");
-}
+  window.location.href = "browse.html";}
 
 // Function to handle Join Us button click
 function handleJoinUs() {
   // Replace this with your desired action for Join Us
-  alert("Join Us button clicked!");
-}
+  window.location.href = "signup.html";}
