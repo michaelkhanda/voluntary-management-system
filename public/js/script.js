@@ -24,9 +24,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // Hide the "Sign Up" and "Login" buttons
     const signUpBtn = document.getElementById("signup-btn");
     const loginBtn = document.getElementById("login-btn");
+    const joinUsBtn = document.querySelector(".joinus-btn");
     signUpBtn.style.display = "none";
     loginBtn.style.display = "none";
-  }
+    joinUsBtn.style.display = "none";  }
 });
 
 document.addEventListener("DOMContentLoaded", function () {
