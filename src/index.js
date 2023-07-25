@@ -1,3 +1,4 @@
+//index.js
 const express = require('express');
 const app = express();
 const port = 3000;
@@ -49,6 +50,36 @@ app.post('/signup', async (req, res) => {
   } catch (err) {
     // If an error occurs, respond with an error message
     res.status(500).json({ error: 'Error creating user' });
+  }
+});
+
+app.post('/login', async (req, res) => {
+  try {
+    const { email, password } = req.body;
+
+    // Find the user with the provided email in the database
+    const user = await User.findOne({ email });
+
+    if (!user) {
+      // If the user is not found, respond with an error message
+      return res.json({ success: false, message: 'Invalid email or password.' });
+    }
+
+    // Validate the provided password against the stored hashed password
+    if (user.password !== password) {
+      // If the password doesn't match, respond with an error message
+      return res.json({ success: false, message: 'Invalid email or password.' });
+    }
+
+    // If email and password match, login is successful
+    // You can include other user information here if needed
+    const userData = { userName: user.firstName };
+
+    // Respond with a success message and user data
+    res.json({ success: true, ...userData });
+  } catch (err) {
+    // If an error occurs, respond with an error message
+    res.status(500).json({ success: false, message: 'Error during login' });
   }
 });
 

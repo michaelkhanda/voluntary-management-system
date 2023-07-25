@@ -19,15 +19,31 @@ document.addEventListener("DOMContentLoaded", function () {
 	  return;
 	}
   
-	// Replace this block with your actual login logic
-	// For now, we'll just assume the login is successful and set a user name
-	const userName = "John Doe";
+	// Send the user's email and password to the server for authentication
+	const loginData = { email, password };
+	fetch("/login", {
+	  method: "POST",
+	  headers: {
+		"Content-Type": "application/json",
+	  },
+	  body: JSON.stringify(loginData),
+	})
+	  .then((response) => response.json())
+	  .then((data) => {
+		// Check if the login was successful based on the response from the server
+		if (data.success) {
+		  // Store the user's name in a cookie (you can modify this to store other user information)
+		  Cookies.set("user_name", data.userName);
   
-	// Store the user's name in a cookie
-	Cookies.set("user_name", userName);
-  
-	// Redirect the user to index.html after successful login
-	window.location.href = "index.html";
+		  // Redirect the user to index.html after successful login
+		  window.location.href = "index.html";
+		} else {
+		  // Show an error message if the login was unsuccessful
+		  alert(data.message);
+		}
+	  })
+	  .catch((error) => {
+		console.error("Error occurred during login:", error);
+	  });
   }
-  
   

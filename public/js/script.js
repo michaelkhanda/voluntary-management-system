@@ -12,6 +12,24 @@ document.addEventListener("DOMContentLoaded", function () {
   joinUsBtn.addEventListener("click", handleJoinUs);
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  // Get the user's name from the cookie
+  const userName = Cookies.get("user_name");
+
+  // Check if the user's name exists in the cookie
+  if (userName) {
+    // If the user's name exists, display it instead of the "Sign Up" and "Login" buttons
+    const userNameContainer = document.getElementById("user-name-container");
+    userNameContainer.textContent = `Welcome, ${userName}!`;
+    // Hide the "Sign Up" and "Login" buttons
+    const signUpBtn = document.getElementById("signup-btn");
+    const loginBtn = document.getElementById("login-btn");
+    signUpBtn.style.display = "none";
+    loginBtn.style.display = "none";
+  }
+});
+
+
 // Function to handle Sign Up button click
 function handleSignup() {
   // Navigate to signup.html

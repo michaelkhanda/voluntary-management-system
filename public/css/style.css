@@ -86,6 +86,31 @@ body {
 
 }
 
+/* Add your other styles here */
+
+/* Styling for the user's name container on the right side */
+#user-name-container {
+  padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    background: #fff;
+
+    color: rgba(119, 119, 119, 0.47);
+    font-size: 16px;
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: 1000;
+    line-height: normal;
+    margin-left: auto;
+}
+
+/* Flexbox for the nav-menu-container */
+.nav-menu-container {
+  display: flex;
+  align-items: center;
+}
+
+
 .signup-btn {
     color: #2E2E45;
     padding: 10px 20px;
