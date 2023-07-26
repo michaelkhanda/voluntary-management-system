@@ -1,4 +1,26 @@
 a{
     text-decoration: none;
 }
+
+.login-form {
+	max-width: 420px;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 200px;
+}
+
+.login-header{
+    background-color:#E34C45;
+    margin-top: 100px;
+    height: 100px;
+}
+
+
+h2{
+    color: white;
+    text-align:left;
+    padding-top: 30px;
+    padding-left: 30px;
+    font-size: 30px;
+}
 /* End of Footer */

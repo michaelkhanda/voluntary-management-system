@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (userName) {
     // If the user's name exists, display it instead of the "Sign Up" and "Login" buttons
     const userNameContainer = document.getElementById("user-name-container");
-    userNameContainer.textContent = `Welcome 😄, ${userName}!`;
+    userNameContainer.textContent = `Welcome 😇, ${userName}!`;
     // Hide the "Sign Up" and "Login" buttons
     const signUpBtn = document.getElementById("signup-btn");
     const loginBtn = document.getElementById("login-btn");
