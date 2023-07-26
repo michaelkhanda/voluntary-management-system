@@ -1,32 +1,45 @@
+/* Apply some styling to the signup section */
 .signup-section {
-	margin-top: 200px;
+    margin-top: 100px;
 }
 
+/* Center the form and add some box shadow to give it depth */
 .signup-form {
-	max-width: 420px;
-	display: block;
-	margin: 0 auto;
-	margin-bottom: 100px;
+    max-width: 420px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
 }
 
+/* Style the form input */
 .form-input {
-	border: none;
-	width: 400px;
-	margin: 10px 0;
-	padding: 5px;
+    border: none;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
     font-size: 16px;
     font-weight: 600;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    transition: background-color 0.3s;
 }
 
 .form-input:focus {
-	outline: none;
+    outline: none;
+    background-color: #e0e0e0;
 }
 
-#signup, #login {
-	display: inline-block;
-    color: #333;
-	cursor: pointer;
-	margin-top: 20px;
+
+/* Style the signup and login buttons */
+#signup,
+#login {
+    display: inline-block;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
     font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
@@ -36,14 +49,19 @@
     letter-spacing: 0.05em;
     text-decoration: none;
     min-width: 160px;
-    background: #fff;
-    border: 2px solid #333;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
+    background-color: #2E2E45; /* Change the background color to a darker shade */
+    border: none;
     transition: all 0.3s;
 }
 
-a{
+#signup:hover,
+#login:hover {
+    
+    transform: scale(1.05);
+}
+
+/* Style the anchor links */
+a {
     text-decoration: none;
-    color: #333;
+    color: #666; /* Slightly lighter color for anchor links */
 }
