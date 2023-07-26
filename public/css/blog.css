@@ -69,7 +69,12 @@
 }
 
 .blog-card {
-	max-width: 300px;
+	max-width: 200px;
+	
+    padding: 60px;
+    border-radius: 50px;
+    background-color: aliceblue;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .blog-carding {
@@ -98,6 +103,7 @@
     border-radius: 10px;
     margin-top: 10px;
     display: inline-block;
+	cursor: pointer;
 }
 
 .post {
@@ -144,4 +150,11 @@
 .related-card img {
 	max-width: 300px;
 	gap: 50px;
+}
+
+.blog-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
 }

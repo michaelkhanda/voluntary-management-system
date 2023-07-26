@@ -14,12 +14,14 @@
 
 <body>
 
-  <!-- Start of Navigation Bar -->
-  <section class="navbar-section">
-    <div class="navbar">
-      <a href="index.html">
-        <div class="logo"> <img src="images/image 1.jpg" alt="Logo Image"></div>
-      </a>
+ <!-- Start of Navigation Bar -->
+ <section class="navbar-section">
+  <div class="navbar">
+    <a href="index.html">
+      <div class="logo"> <img src="images/image 1.jpg" alt="Logo Image"></div>
+    </a>
+
+    <div class="nav-menu-container">
       <ul class="menu">
         <li><a href="index.html">HOME</a></li>
         <li><a href="browse.html">BROWSE OPPORTUNITIES</a></li>
@@ -27,88 +29,114 @@
         <li class="active"><a href="blog.html">BLOG</a></li>
         <li><a href="contactus.html">CONTACT US</a></li>
       </ul>
-      <div>
-        <button class="signup-btn"><a href="signup.html">Sign Up</a></button>
-		<button class="login-btn"><a href="login.html">Login</a></button>
+
+      <!-- Add a div to display the user's name on the right side -->
+      <div id="user-name-container">
+        <!-- The content will be dynamically updated with the user's name -->
+      </div>
+
+    </div>
+   
+
+    <div>
+      <button id="signup-btn" class="signup-btn">Sign Up</button>
+      <button id="login-btn" class="login-btn">Login</button>
+    </div>
+  </div>
+</section>
+
+<!-- End of Navigation bar -->
+
+  <!-- Blog Area -->
+
+  <section class="blog">
+    <div class="blog-area">
+      <div class="blog-banner">
+
+        <div class="blog-slideshow">
+          <div class="blog-slide">
+            <img src="images/blog-1.png" alt="blog image" />
+            <h1>WHY YOUR COMPANY SHOULD PRIORITIZE SOCIAL IMPACT</h1>
+          </div>
+          <div class="blog-slide">
+            <img src="images/blog-2.png" alt="blog image" />
+            <h1>CAN BUSINESSES GIVE BACK IN A PANDEMIC?</h1>
+          </div>
+          <div class="blog-slide">
+            <img src="images/blog-3.png" alt="blog image" />
+            <h1>THE BEST EMPLOYEES GIVE A D@MN!</h1>
+          </div>
+
+          <a href="#/" class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a href="#/" class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+      </div>
+
+      <div class="blog-cards">
+
+        <div class="blog-card">
+          <img src="images/individual-image.jpeg" alt="blog-image" />
+          <div class="blog-carding">
+            <p class="blog-title">MARKETING YOUR SOCIAL IMPACT ISN’T ENOUGH. YOU HAVE TO MEASURE IT</p>
+            <p class="blog-by">by VoluCare | Jul 21, 2023 | Recruit & Recognize</p>
+            <p class="blog-snippet">Here’s some good news for companies who invest in social impact programs: research
+              from analysts from the investment firm All Street found that funds with a social mission generated
+              investment exits with an average internal rate of return of 33.5 percent.</p>
+            <a class="blog-more">READ MORE</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <img src="images/non-profit-image.jpeg" alt="blog-image" />
+          <div class="blog-carding">
+            <p class="blog-title">MARKETING YOUR SOCIAL IMPACT ISN’T ENOUGH. YOU HAVE TO MEASURE IT</p>
+            <p class="blog-by">by VoluCare | Jul 21, 2023 | Recruit & Recognize</p>
+            <p class="blog-snippet">Here’s some good news for companies who invest in social impact programs: research
+              from analysts from the investment firm All Street found that funds with a social mission generated
+              investment exits with an average internal rate of return of 33.5 percent.</p>
+            <a class="blog-more">READ MORE</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <img src="images/Vol Image.jpeg" alt="blog-image" />
+          <div class="blog-carding">
+            <p class="blog-title">MARKETING YOUR SOCIAL IMPACT ISN’T ENOUGH. YOU HAVE TO MEASURE IT</p>
+            <p class="blog-by">by VoluCare | Jul 21, 2023 | Recruit & Recognize</p>
+            <p class="blog-snippet">Here’s some good news for companies who invest in social impact programs: research
+              from analysts from the investment firm All Street found that funds with a social mission generated
+              investment exits with an average internal rate of return of 33.5 percent.</p>
+            <a class="blog-more">READ MORE</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <img src="images/Vol Image2.jpeg" alt="blog-image" />
+          <div class="blog-carding">
+            <p class="blog-title">MARKETING YOUR SOCIAL IMPACT ISN’T ENOUGH. YOU HAVE TO MEASURE IT</p>
+            <p class="blog-by">by VoluCare | Jul 21, 2023 | Recruit & Recognize</p>
+            <p class="blog-snippet">Here’s some good news for companies who invest in social impact programs: research
+              from analysts from the investment firm All Street found that funds with a social mission generated
+              investment exits with an average internal rate of return of 33.5 percent.</p>
+            <a class="blog-more">READ MORE</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <img src="images/Vol Image.jpeg" alt="blog-image" />
+          <div class="blog-carding">
+            <p class="blog-title">MARKETING YOUR SOCIAL IMPACT ISN’T ENOUGH. YOU HAVE TO MEASURE IT</p>
+            <p class="blog-by">by VoluCare | Jul 21, 2023 | Recruit & Recognize</p>
+            <p class="blog-snippet">Here’s some good news for companies who invest in social impact programs: research
+              from analysts from the investment firm All Street found that funds with a social mission generated
+              investment exits with an average internal rate of return of 33.5 percent.</p>
+            <a class="blog-more">READ MORE</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-  
-  <!-- End of Navigation bar -->
 
-  <!-- Blog Area -->
-  
-  <section class="blog">
-    <div class="blog-area">
-		<div class="blog-banner">
-			<div class="blog-slideshow">
-				<div class="blog-slide">
-					<img src="images/blog-1.png" alt="blog image" />
-					<h1>WHY YOUR COMPANY SHOULD PRIORITIZE SOCIAL IMPACT</h1>
-				</div>
-				<div class="blog-slide">
-					<img src="images/blog-2.png" alt="blog image" />
-					<h1>CAN BUSINESSES GIVE BACK IN A PANDEMIC?</h1>
-				</div>
-				<div class="blog-slide">
-					<img src="images/blog-3.png" alt="blog image" />
-					<h1>THE BEST EMPLOYEES GIVE A D@MN!</h1>
-				</div>
-				
-				<a href="#/" class="prev" onclick="plusSlides(-1)">&#10094;</a>
-				<a href="#/" class="next" onclick="plusSlides(1)">&#10095;</a>
-			</div>
-		</div>
-		<div class="blog-cards">
-			<div class="blog-card">
-				<img src="" alt="blog-image" />
-				<div class="blog-carding">
-					<p class="blog-title">MARKETING YOUR SOCIAL IMPACT ISN’T ENOUGH. YOU HAVE TO MEASURE IT</p>
-					<p class="blog-by">by VoluCare | Jul 21, 2023 | Recruit & Recognize</p>
-					<p class="blog-snippet">Here’s some good news for companies who invest in social impact programs: research from analysts from the investment firm All Street found that funds with a social mission generated investment exits with an average internal rate of return of 33.5 percent.</p>
-					<a class="blog-more" href="#/">READ MORE</a>
-				</div>
-			</div>
-			<div class="blog-card">
-				<img src="" alt="blog-image" />
-				<div class="blog-carding">
-					<p class="blog-title">MARKETING YOUR SOCIAL IMPACT ISN’T ENOUGH. YOU HAVE TO MEASURE IT</p>
-					<p class="blog-by">by VoluCare | Jul 21, 2023 | Recruit & Recognize</p>
-					<p class="blog-snippet">Here’s some good news for companies who invest in social impact programs: research from analysts from the investment firm All Street found that funds with a social mission generated investment exits with an average internal rate of return of 33.5 percent.</p>
-					<a class="blog-more" href="#/">READ MORE</a>
-				</div>
-			</div>
-			<div class="blog-card">
-				<img src="" alt="blog-image" />
-				<div class="blog-carding">
-					<p class="blog-title">MARKETING YOUR SOCIAL IMPACT ISN’T ENOUGH. YOU HAVE TO MEASURE IT</p>
-					<p class="blog-by">by VoluCare | Jul 21, 2023 | Recruit & Recognize</p>
-					<p class="blog-snippet">Here’s some good news for companies who invest in social impact programs: research from analysts from the investment firm All Street found that funds with a social mission generated investment exits with an average internal rate of return of 33.5 percent.</p>
-					<a class="blog-more" href="#/">READ MORE</a>
-				</div>
-			</div>
-			<div class="blog-card">
-				<img src="" alt="blog-image" />
-				<div class="blog-carding">
-					<p class="blog-title">MARKETING YOUR SOCIAL IMPACT ISN’T ENOUGH. YOU HAVE TO MEASURE IT</p>
-					<p class="blog-by">by VoluCare | Jul 21, 2023 | Recruit & Recognize</p>
-					<p class="blog-snippet">Here’s some good news for companies who invest in social impact programs: research from analysts from the investment firm All Street found that funds with a social mission generated investment exits with an average internal rate of return of 33.5 percent.</p>
-					<a class="blog-more" href="#/">READ MORE</a>
-				</div>
-			</div>
-			<div class="blog-card">
-				<img src="" alt="blog-image" />
-				<div class="blog-carding">
-					<p class="blog-title">MARKETING YOUR SOCIAL IMPACT ISN’T ENOUGH. YOU HAVE TO MEASURE IT</p>
-					<p class="blog-by">by VoluCare | Jul 21, 2023 | Recruit & Recognize</p>
-					<p class="blog-snippet">Here’s some good news for companies who invest in social impact programs: research from analysts from the investment firm All Street found that funds with a social mission generated investment exits with an average internal rate of return of 33.5 percent.</p>
-					<a class="blog-more" href="#/">READ MORE</a>
-				</div>
-			</div>
-		</div>
-	</div>
-  </section>
-  
   <!-- End of Blog Area -->
 
   <!-- Start of Footer -->
@@ -117,7 +145,7 @@
     <div class="footer-column">
       <h3 class="footer-heading">Company</h3>
       <ul class="footer-links">
-        <li><a href="#">About Us</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
         <li><a href="#">Careers</a></li>
         <li><a href="#">Blogs</a></li>
       </ul>
@@ -126,7 +154,7 @@
     <div class="footer-column">
       <h3 class="footer-heading">Support</h3>
       <ul class="footer-links">
-        <li><a href="#">Contact Us</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
         <li><a href="#">FAQs</a></li>
         <li><a href="#">Terms and Conditions</a></li>
         <li><a href="#">Privacy Policy</a></li>
@@ -148,7 +176,8 @@
     </div>
   </footer>
   <!-- End of Footer -->
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
   <script src="js/script.js"></script>
   <script src="js/blog.js"></script>

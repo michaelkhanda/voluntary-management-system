@@ -24,7 +24,6 @@ function showSlides(n) {
 
 $(document).ready(function() {
     $(document).on("click",".blog-card, .blog-slide",function() {
-       // window.location.replace("http://www.zigglor.xyz/works/volucare/post.html");
 		window.location.href = "post.html";
     });
 });
