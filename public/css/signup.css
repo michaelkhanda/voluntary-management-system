@@ -42,3 +42,8 @@
     -o-transition: all 0.3s;
     transition: all 0.3s;
 }
+
+a{
+    text-decoration: none;
+    color: #333;
+}
