@@ -53,3 +53,7 @@
 	flex-wrap: wrap;
 	border-bottom: 1px solid #ddd;
 }
+
+a{
+	text-decoration: none;
+}
