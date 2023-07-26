@@ -5,7 +5,6 @@ const port = 3000;
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
-const bcryptjs = require('bcryptjs');
 
 // Connect to MongoDB (Replace 'mongodb://localhost:27017/volucare' with your MongoDB connection string)
 mongoose.connect('mongodb://localhost:27017/volucare', {
