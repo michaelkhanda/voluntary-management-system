@@ -4,6 +4,8 @@ const app = express();
 const port = 3000;
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const bcrypt = require('bcrypt');
+const bcryptjs = require('bcryptjs');
 
 // Connect to MongoDB (Replace 'mongodb://localhost:27017/volucare' with your MongoDB connection string)
 mongoose.connect('mongodb://localhost:27017/volucare', {
@@ -65,7 +67,6 @@ app.post('/login', async (req, res) => {
       return res.json({ success: false, message: 'Invalid email or password.' });
     }
 
-    // Validate the provided password against the stored hashed password
     if (user.password !== password) {
       // If the password doesn't match, respond with an error message
       return res.json({ success: false, message: 'Invalid email or password.' });
