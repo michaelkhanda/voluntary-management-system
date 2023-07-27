@@ -65,3 +65,13 @@ a {
     text-decoration: none;
     color: #666; /* Slightly lighter color for anchor links */
 }
+
+  
+  /* Style the error message */
+  .error-message {
+    display: block;
+    color: red;
+    font-size: 14px;
+    font-style: italic;
+  }
+  

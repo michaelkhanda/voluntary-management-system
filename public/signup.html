@@ -52,7 +52,8 @@
         <input class="form-input" type="text" name="lastName" id="lastName" size=18 maxlength=50 placeholder="Last Name *" required>
         <input class="form-input" type="email" name="email" id="email" size=18 maxlength=70 placeholder="Email *" required>
         <input class="form-input" type="password" name="password" id="password" minlength=8 placeholder="Password *" required>
-        <p>Password must be at least 8 characters and include one number.</p>
+        <p>Password must contain at least one letter, one number, one symbol, and one special character.</p>
+        <p> <span id="password-error" class="error-message"></span></p>
         <input type="checkbox" id="subscribe" name="subscribe">
         <label for="subscribe"> I agree to the VoluCare Terms and Conditions.</label><br>
         <button type="submit" id="signup">SIGN UP</button>
@@ -105,7 +106,7 @@
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
   <script src="js/script.js"></script>
   <script src="js/signup.js"></script>
-  <script src="js/login.js"></script>
+  <!-- <script src="js/login.js"></script> -->
 </body>
 
 </html>

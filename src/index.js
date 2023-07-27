@@ -48,14 +48,6 @@ app.post('/signup', async (req, res) => {
   try {
     const { firstName, lastName, email, password } = req.body;
 
-    // Check if the password is valid
-    if (!isPasswordValid(password)) {
-      return res.status(400).json({
-        error:
-          'Password must contain at least one letter, one number, one symbol, and one special character.',
-      });
-    }
-
     // Hash the password
     const hashedPassword = await bcrypt.hash(password, 10); // 10 is the number of salt rounds
 
