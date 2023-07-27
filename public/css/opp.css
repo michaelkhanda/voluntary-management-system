@@ -57,3 +57,60 @@
 a{
 	text-decoration: none;
 }
+
+/* Styling for the popup form */
+.popup-form {
+	width: 500px;
+	max-width: 90%;
+	padding: 30px;
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #f7f7f7;
+	border-radius: 5px;
+	padding: 20px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	z-index: 9999;
+  }
+
+  .popup-form h2 {
+	margin-top: 0;
+  }
+
+  .popup-form input[type="text"],
+  .popup-form input[type="email"],
+  .popup-form input[type="subject"],
+  .popup-form textarea {
+	display: block;
+	width: 100%;
+	margin-bottom: 10px;
+	padding: 8px;
+	border: none;
+	border-bottom: 1px solid #9a4ba4;
+	border-radius: 3px;
+  }
+
+  .popup-form button {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+	background-color: #9a4ba4;
+	color: white;
+	border: 2px solid purple;
+	border-radius: 5px;
+	padding: 8px 16px;
+	cursor: pointer;
+	transition: 1.5s;
+	width: 15%;
+	text-align: center;
+  }
+  .popup-form button[type="submit"] {
+	margin-right: 10px;
+  }
+
+  .popup-form button:hover {
+	background-color: #d8bfd8;
+	color: purple;
+  }

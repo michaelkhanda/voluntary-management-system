@@ -4,6 +4,7 @@ const port = 3000;
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
+const nodemailer = require('nodemailer');
 
 // Connect to MongoDB (Replace 'mongodb://localhost:27017/volucare' with your MongoDB connection string)
 mongoose.connect('mongodb://localhost:27017/volucare', {
@@ -97,6 +98,37 @@ app.post('/login', async (req, res) => {
     // If an error occurs, respond with an error message
     res.status(500).json({ success: false, message: 'Error during login' });
   }
+});
+
+//email sending
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/public/opp.html');
+  });
+
+app.post('/', (req, res) => {
+  console.log(req.body);
+  const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+          user: 'rhonnahmkenda@gmail.com',
+          pass: 'hwsfpdwuztniqjwv'
+      }
+  });
+  const mailOptions = {
+      from: req.body.email,
+      to: 'michaelkhanda006@gmail.com',
+      subject: `Message from ${req.body.email}: ${req.body.subject}`,
+      text: req.body.message
+}
+transporter.sendMail(mailOptions, (error, info) => {
+  if (error) {
+      console.log(error);
+      res.send('error');
+  } else {
+      console.log('Email sent: ' + info.response);
+      res.send('success');
+  }
+  });
 });
 
 // Start the server

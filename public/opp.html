@@ -117,10 +117,36 @@
 			  <p class="line-left"><strong>Gender:</strong></p>
 			  <p class="line-right">Any</p>
 			</div>
+      <button class="contact-button" onclick="openPopupForm()">Contact</button>
 		  </div>
 		</div>
 	  </div>
 	</div>
+
+  <!-- Start of Contact Form Popup -->
+  <div class="popup-form" id="popupForm">
+    <h2>Contact Doctor</h2>
+    <form class="contact-form">
+      <input type="text" id="dname" placeholder="Your Name" required>
+      <input type="email" id="demail" placeholder="Your Email" required>
+      <input type="subject" id="dsubject" placeholder="Subject" required>
+      <textarea id="dmessage" placeholder="Message" required></textarea>
+      <button type="submit" class="submit" value="Send Message">Submit</button>
+    </form>
+    <button onclick="closePopupForm()">Close</button>
+  </div>
+
+  <script>
+    function openPopupForm() {
+      var popupForm = document.getElementById("popupForm");
+      popupForm.style.display = "block";
+    }
+
+    function closePopupForm() {
+      var popupForm = document.getElementById("popupForm");
+      popupForm.style.display = "none";
+    }
+  </script>
   </section>
   
   <!-- Opportunity Area End -->
@@ -166,6 +192,7 @@
   <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
   <script src="js/script.js"></script>
   <script src="js/login.js"></script>
+  <script src="js/formpopup.js"></script>
 </body>
 
 </html>
