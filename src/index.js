@@ -24,7 +24,6 @@ const User = mongoose.model('User', userSchema);
 
 // Function to validate the password
 function isPasswordValid(password) {
-  // Check if the password contains at least one letter, one number, one symbol, and one special character
   const letterPattern = /[a-zA-Z]/;
   const numberPattern = /[0-9]/;
   const symbolPattern = /[!@#$%^&*()_+{}\[\]:;<>,.?~\-=/\\|]/;
@@ -47,17 +46,13 @@ app.use(express.static('public'));
 app.post('/signup', async (req, res) => {
   try {
     const { firstName, lastName, email, password } = req.body;
-
-    // Hash the password
-    const hashedPassword = await bcrypt.hash(password, 10); // 10 is the number of salt rounds
-
-    // Create a new user object with the hashed password
+    const hashedPassword = await bcrypt.hash(password, 10);
     const newUser = new User({
       firstName,
       lastName,
       email,
-      password: hashedPassword, // Save the hashed password to the database
-      unhashedPassword: password, // Save the unhashed password temporarily for password validation
+      password: hashedPassword,
+      unhashedPassword: password,
     });
 
     // Save the user to the database
