@@ -27,10 +27,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const joinUsBtn = document.querySelector(".joinus-btn");
     signUpBtn.style.display = "none";
     loginBtn.style.display = "none";
-    joinUsBtn.style.display = "none"; 
+    joinUsBtn.style.display = "none";
     // Add a click event listener to the user's name container to handle sign-out
     userNameContainer.addEventListener("click", handleSignOut);
-  
+
   }
 });
 
@@ -72,9 +72,11 @@ function handleLogin() {
 // Function to handle Browse Opportunities button click
 function handleBrowseOpportunities() {
   // Replace this with your desired action for Browse Opportunities
-  window.location.href = "browse.html";}
+  window.location.href = "browse.html";
+}
 
 // Function to handle Join Us button click
 function handleJoinUs() {
   // Replace this with your desired action for Join Us
-  window.location.href = "signup.html";}
+  window.location.href = "signup.html";
+}

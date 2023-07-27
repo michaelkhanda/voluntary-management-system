@@ -90,7 +90,7 @@ body {
 
 /* Styling for the user's name container on the right side */
 #user-name-container {
-  padding: 10px 20px;
+    padding: 10px 20px;
     border: none;
     cursor: pointer;
     background: #fff;
@@ -106,8 +106,8 @@ body {
 
 /* Flexbox for the nav-menu-container */
 .nav-menu-container {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 
@@ -138,7 +138,7 @@ body {
 
 }
 
-button{
+button {
     transition: all 0.2s ease-in-out;
 }
 

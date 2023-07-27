@@ -8,12 +8,12 @@ let messageInput = document.getElementById('dmessage');
 function openPopupForm() {
     var popupForm = document.getElementById("popupForm");
     popupForm.style.display = "block";
-  }
+}
 
-  function closePopupForm() {
+function closePopupForm() {
     var popupForm = document.getElementById("popupForm");
     popupForm.style.display = "none";
-  }
+}
 
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -23,13 +23,13 @@ contactForm.addEventListener('submit', (e) => {
         subject: subjectInput.value,
         message: messageInput.value
     }
-    
+
     let xhr = new XMLHttpRequest();
     xhr.open('POST', '/');
     xhr.setRequestHeader('content-type', 'application/json');
-    xhr.onload = function() {
+    xhr.onload = function () {
         console.log(xhr.responseText);
-        if(xhr.responseText == 'success') {
+        if (xhr.responseText == 'success') {
             alert('Email sent');
             nameInput.value = '';
             emailInput.value = '';

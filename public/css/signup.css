@@ -49,29 +49,30 @@
     letter-spacing: 0.05em;
     text-decoration: none;
     min-width: 160px;
-    background-color: #2E2E45; /* Change the background color to a darker shade */
+    background-color: #2E2E45;
+    /* Change the background color to a darker shade */
     border: none;
     transition: all 0.3s;
 }
 
 #signup:hover,
 #login:hover {
-    
+
     transform: scale(1.05);
 }
 
 /* Style the anchor links */
 a {
     text-decoration: none;
-    color: #666; /* Slightly lighter color for anchor links */
+    color: #666;
+    /* Slightly lighter color for anchor links */
 }
 
-  
-  /* Style the error message */
-  .error-message {
+
+/* Style the error message */
+.error-message {
     display: block;
     color: red;
     font-size: 14px;
     font-style: italic;
-  }
-  
+}

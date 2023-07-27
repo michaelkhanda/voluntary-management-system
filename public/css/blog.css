@@ -28,16 +28,22 @@
 	opacity: .8;
 	color: #fff;
 	margin: 0;
-    padding: 10px;
-    width: 100%;
+	padding: 10px;
+	width: 100%;
 }
 
 @keyframes fade {
-	from {opacity: .4}
-	to {opacity: 1}
+	from {
+		opacity: .4
+	}
+
+	to {
+		opacity: 1
+	}
 }
 
-.prev, .next {
+.prev,
+.next {
 	cursor: pointer;
 	position: absolute;
 	top: 50%;
@@ -57,23 +63,24 @@
 	border-radius: 3px 0 0 3px;
 }
 
-.prev:hover, .next:hover {
-	background-color: rgba(255,255,255,0.8);
+.prev:hover,
+.next:hover {
+	background-color: rgba(255, 255, 255, 0.8);
 }
 
 .blog-cards {
 	display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+	justify-content: center;
+	flex-wrap: wrap;
 	gap: 20px;
 }
 
 .blog-card {
 	max-width: 200px;
-    padding: 60px;
-    border-radius: 50px;
-    background-color: aliceblue;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	padding: 60px;
+	border-radius: 50px;
+	background-color: aliceblue;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .blog-carding {
@@ -90,18 +97,18 @@
 
 .blog-snippet {
 	display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
 }
 
 .blog-more {
 	font-weight: 600;
-    background: #ccc;
-    padding: 10px;
-    border-radius: 10px;
-    margin-top: 10px;
-    display: inline-block;
+	background: #ccc;
+	padding: 10px;
+	border-radius: 10px;
+	margin-top: 10px;
+	display: inline-block;
 	cursor: pointer;
 }
 
@@ -120,6 +127,7 @@
 	display: block;
 	margin: 0 auto;
 }
+
 .author {
 	margin-top: 100px;
 }
@@ -130,7 +138,7 @@
 
 .author-area img {
 	border-radius: 50%;
-    max-height: 100px;
+	max-height: 100px;
 	margin: 20px;
 }
 
@@ -152,8 +160,8 @@
 }
 
 .blog-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 15px;
+	width: 100%;
+	height: auto;
+	border-radius: 5px;
+	margin-bottom: 15px;
 }
