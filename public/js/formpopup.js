@@ -5,6 +5,16 @@ let emailInput = document.getElementById('demail');
 let subjectInput = document.getElementById('dsubject');
 let messageInput = document.getElementById('dmessage');
 
+function openPopupForm() {
+    var popupForm = document.getElementById("popupForm");
+    popupForm.style.display = "block";
+  }
+
+  function closePopupForm() {
+    var popupForm = document.getElementById("popupForm");
+    popupForm.style.display = "none";
+  }
+
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     let formData = {
