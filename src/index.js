@@ -79,8 +79,6 @@ app.post('/signup', async (req, res) => {
   }
 });
 
-// Rest of your code (login route and server start) remains the same
-
 
 app.post('/login', async (req, res) => {
   try {
