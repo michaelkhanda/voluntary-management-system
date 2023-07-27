@@ -1,4 +1,3 @@
-//index.js
 const express = require('express');
 const app = express();
 const port = 3000;
@@ -18,6 +17,7 @@ const userSchema = new mongoose.Schema({
   lastName: String,
   email: String,
   password: String,
+  unhashedPassword: String, // unhashed password is stored temporarily for password validation
 });
 
 const User = mongoose.model('User', userSchema);
@@ -29,18 +29,21 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Serve static files from the 'public' folder
 app.use(express.static('public'));
 
-
 // Handle form submission
 app.post('/signup', async (req, res) => {
   try {
     const { firstName, lastName, email, password } = req.body;
 
-    // Create a new user object
+    // Hash the password
+    const hashedPassword = await bcrypt.hash(password, 10); // 10 is the number of salt rounds
+
+    // Create a new user object with the hashed password
     const newUser = new User({
       firstName,
       lastName,
       email,
-      password,
+      password: hashedPassword, // Save the hashed password to the database
+      unhashedPassword: password, // Save the unhashed password temporarily for password validation
     });
 
     // Save the user to the database
@@ -66,7 +69,10 @@ app.post('/login', async (req, res) => {
       return res.json({ success: false, message: 'Invalid email or password.' });
     }
 
-    if (user.password !== password) {
+    // Compare the provided password with the hashed password in the database
+    const isPasswordValid = await bcrypt.compare(password, user.password);
+
+    if (!isPasswordValid) {
       // If the password doesn't match, respond with an error message
       return res.json({ success: false, message: 'Invalid email or password.' });
     }
@@ -82,7 +88,6 @@ app.post('/login', async (req, res) => {
     res.status(500).json({ success: false, message: 'Error during login' });
   }
 });
-
 
 // Start the server
 app.listen(port, () => {
