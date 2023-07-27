@@ -22,6 +22,20 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model('User', userSchema);
 
+// Function to validate the password
+function isPasswordValid(password) {
+  // Check if the password contains at least one letter, one number, one symbol, and one special character
+  const letterPattern = /[a-zA-Z]/;
+  const numberPattern = /[0-9]/;
+  const symbolPattern = /[!@#$%^&*()_+{}\[\]:;<>,.?~\-=/\\|]/;
+
+  return (
+    letterPattern.test(password) &&
+    numberPattern.test(password) &&
+    symbolPattern.test(password)
+  );
+}
+
 // Parse JSON and form data
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -33,6 +47,14 @@ app.use(express.static('public'));
 app.post('/signup', async (req, res) => {
   try {
     const { firstName, lastName, email, password } = req.body;
+
+    // Check if the password is valid
+    if (!isPasswordValid(password)) {
+      return res.status(400).json({
+        error:
+          'Password must contain at least one letter, one number, one symbol, and one special character.',
+      });
+    }
 
     // Hash the password
     const hashedPassword = await bcrypt.hash(password, 10); // 10 is the number of salt rounds
@@ -56,6 +78,9 @@ app.post('/signup', async (req, res) => {
     res.status(500).json({ error: 'Error creating user' });
   }
 });
+
+// Rest of your code (login route and server start) remains the same
+
 
 app.post('/login', async (req, res) => {
   try {
