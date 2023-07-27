@@ -138,6 +138,14 @@ body {
 
 }
 
+button{
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.03);
+}
+
 /* End of navigation bar styling */
 
 /* CSS styling for the hero section */
@@ -205,6 +213,10 @@ h2 span.bottom {
     cursor: pointer;
 }
 
+.browseopp-btn:hover {
+    background-color: #b96170;
+}
+
 .joinus-btn {
     background-color: #4CAF50;
     color: white;
@@ -218,9 +230,11 @@ h2 span.bottom {
     cursor: pointer;
 }
 
-.browseopp-btn:hover {
-    background-color: #b96170;
+.joinus-btn:hover {
+    background-color: #3e8e41;
 }
+
+
 
 .hero-image {
     display: flex;
