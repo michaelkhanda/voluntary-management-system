@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     signUpBtn.style.display = "none";
     loginBtn.style.display = "none";
     joinUsBtn.style.display = "none";
+    
     // Add a click event listener to the user's name container to handle sign-out
     userNameContainer.addEventListener("click", handleSignOut);
 
