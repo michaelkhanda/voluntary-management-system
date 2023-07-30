@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   // Get the user's name from the cookie
   const userName = Cookies.get("user_name");
-
   // Check if the user's name exists in the cookie
   if (userName) {
     // If the user's name exists, display it instead of the "Sign Up" and "Login" buttons
@@ -28,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     signUpBtn.style.display = "none";
     loginBtn.style.display = "none";
     joinUsBtn.style.display = "none";
-    
+
     // Add a click event listener to the user's name container to handle sign-out
     userNameContainer.addEventListener("click", handleSignOut);
 
