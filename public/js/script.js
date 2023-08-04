@@ -1,6 +1,5 @@
 // Wait for the DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", function () {
-  // Add event listeners to buttons
   const signupBtn = document.getElementById("signup-btn");
   const loginBtn = document.getElementById("login-btn"); // Changed to getElementById
   const browseOppBtn = document.querySelector(".browseopp-btn");
