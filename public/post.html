@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/blog.css">
+  <link rel="stylesheet" href="css/post.css">
 </head>
 
 <body>
@@ -152,6 +153,26 @@
         </div>
       </div>
     </div>
+
+    <div class="comments-section">
+      <h2>Leave a Comment</h2>
+      <form id="comment-form">
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="comment">Comment:</label>
+          <textarea id="comment" name="comment" rows="4" required></textarea>
+        </div>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+      <div id="comments-container">
+        <!-- Comments will be dynamically loaded here -->
+      </div>
+    </div>
   </section>
 
   <!-- End of Blog Post Area -->
@@ -198,6 +219,7 @@
   <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
   <script src="js/script.js"></script>
   <script src="js/login.js"></script>
+  <script src="post.js"></script>
 </body>
 
 </html>

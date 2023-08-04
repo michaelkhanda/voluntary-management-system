@@ -4,7 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const loginBtn = document.getElementById("login-btn"); // Changed to getElementById
   const browseOppBtn = document.querySelector(".browseopp-btn");
   const joinUsBtn = document.querySelector(".joinus-btn");
+  const dashboardBtn = document.getElementById("dashboard-btn");
 
+  dashboardBtn.style.display = "none";
   signupBtn.addEventListener("click", handleSignup);
   loginBtn.addEventListener("click", handleLogin);
   browseOppBtn.addEventListener("click", handleBrowseOpportunities);
@@ -26,6 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
     signUpBtn.style.display = "none";
     loginBtn.style.display = "none";
     joinUsBtn.style.display = "none";
+    const dashboardBtn = document.getElementById("dashboard-btn");
+    dashboardBtn.style.display = "inline-block";
 
     // Add a click event listener to the user's name container to handle sign-out
     userNameContainer.addEventListener("click", handleSignOut);
