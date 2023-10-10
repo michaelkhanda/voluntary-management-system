@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+    <!-- Start of Navigation Bar -->
+    <section class="navbar-section">
+        <div class="navbar">
+            <a href="index.html">
+                <div class="logo"> <img src="images/image 1.jpg" alt="Logo Image"></div>
+            </a>
+
+            <div class="nav-menu-container">
+                <ul class="menu">
+                    <li class="active"><a href="index.html">MY DASHBOARD</a></li>
+                    <!-- <li><a href="browse.html">EDIT PROFILE</a></li>
+                    <li><a href="aboutus.html">ACCOUNT SETTINGS</a></li> -->
+                    <li><a href="browse.html">BROWSE OPPORTUNITIES</a></li>
+                    <li><a href="contactus.html">CONTACT US</a></li>
+                </ul>
+
+                <!-- Add a div to display the user's name on the right side -->
+                <div id="user-name-container">
+                    <!-- The content will be dynamically updated with the user's name -->
+                </div>
+
+            </div>
+
+
+            <div>
+                <button id="signup-btn" class="signup-btn">Sign Up</button>
+                <button id="login-btn" class="login-btn">Login</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- End of Navigation bar -->
+    <section class="header">
+        <h1>Welcome To Your Dashboard!</h1>
+    </section>
+
+    <!-- Start of Why Get Involved Section -->
+
+    <section class="why-get-involved-section">
+        <h2 class="section-header">Better <span class="bold-why">Yourself Today!</span></h2>
+        <div class="cards-container">
+
+            <div class="card">
+                <img src="images/skills.jpeg" alt="Individual Image">
+                <h3 class="card-title">My Skills</h3>
+                <p class="card-description">Track and share your
+                    skills.</p>
+                <button class="card-button-signup"><a href="#">Add Skill</a></button>
+            </div>
+
+            <div class="card">
+                <img src="images/time3.jpeg" alt="Non-profit Image">
+                <h3 class="card-title">Volunteer Time</h3>
+                <p class="card-description">Track and manage your volunteer Time.</p>
+                <button class="card-button">Log Hours</button>
+            </div>
+
+            <div class="card">
+                <img src="images/donate.jpeg" alt="Business Image">
+                <h3 class="card-title">Your Donations</h3>
+                <p class="card-description">Unlock the ROI of giving back through logging your donations.</p>
+                <button class="card-button">Add Donation</button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- End of Why Get Involved Section -->
+
+
+    <div class="dashboard">
+        <div class="skills">
+            <h2>My Skills</h2>
+            <ul id="skills-list">
+                <!-- Add skills dynamically here -->
+            </ul>
+            <input type="text" id="new-skill" placeholder="Enter a new skill">
+            <button onclick="addSkill()">Add Skill</button>
+        </div>
+        <div class="volunteer-time">
+            <h2>Volunteer Time</h2>
+            <p>Total Hours: <span id="total-volunteer-time">0</span></p>
+            <input type="number" id="volunteer-hours" placeholder="Enter hours">
+            <button onclick="addVolunteerHours()">Log Hours</button>
+            <ul id="volunteer-hours-list">
+                <!-- Add volunteer hours log dynamically here -->
+            </ul>
+        </div>
+        <div class="donations">
+            <h2>Donations</h2>
+            <p>Total Amount: $<span id="total-donations">0</span></p>
+            <input type="number" id="donation-amount" placeholder="Enter amount">
+            <button onclick="addDonation()">Add Donation</button>
+            <ul id="donations-list"></ul>
+        </div>
+    </div>
+
+    <!-- Start of Footer -->
+
+  <footer class="footer">
+    <div class="footer-column">
+      <h3 class="footer-heading">Company</h3>
+      <ul class="footer-links">
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3 class="footer-heading">Support</h3>
+      <ul class="footer-links">
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Terms and Conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3 class="footer-heading">Stay Connected</h3>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>©2023 VoluCare Inc. Designed by Michael Khanda 🇰🇪</p>
+      </div>
+    </div>
+  </footer>
+  <!-- End of Footer -->
+
+    <script>
+
+        function addSkill() {
+            const newSkill = document.getElementById("new-skill").value;
+            const skillsList = document.getElementById("skills-list");
+            const listItem = document.createElement("li");
+            listItem.innerText = `${newSkill} - ${getCurrentDateTime()}`;
+            skillsList.appendChild(listItem);
+
+            newSkill.value = ""; // Clear the input field after adding skill
+        }
+
+        // Function to add volunteer hours
+        function addVolunteerHours() {
+            const hoursInput = document.getElementById("volunteer-hours");
+            const hoursToAdd = parseInt(hoursInput.value);
+            const totalVolunteerTime = document.getElementById("total-volunteer-time");
+            const currentHours = parseInt(totalVolunteerTime.innerText);
+            totalVolunteerTime.innerText = currentHours + hoursToAdd;
+
+            // Add the logged time and date to the total hours list
+            const volunteerHoursList = document.getElementById("volunteer-hours-list");
+            const listItem = document.createElement("li");
+            listItem.innerText = `${hoursToAdd} hours - ${getCurrentDateTime()}`;
+            volunteerHoursList.appendChild(listItem);
+
+            hoursInput.value = ""; // Clear the input field after logging hours
+        }
+
+        // Function to add a donation amount
+        function addDonation() {
+            const donationInput = document.getElementById("donation-amount");
+            const donationAmount = parseInt(donationInput.value);
+            const totalDonations = document.getElementById("total-donations");
+            const currentDonations = parseInt(totalDonations.innerText);
+            totalDonations.innerText = currentDonations + donationAmount;
+
+            // Add the logged time and date to the donations list
+            const donationsList = document.getElementById("donations-list");
+            const listItem = document.createElement("li");
+            listItem.innerText = `$${donationAmount} - ${getCurrentDateTime()}`;
+            donationsList.appendChild(listItem);
+
+            donationInput.value = ""; // Clear the input field after adding donation
+        }
+
+        // Function to get the current date and time in a formatted string
+        function getCurrentDateTime() {
+            const currentDate = new Date();
+            const dateString = currentDate.toLocaleDateString();
+            const timeString = currentDate.toLocaleTimeString();
+            return `${dateString} at ${timeString}`;
+        }
+    </script>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+
+</body>
+
+</html>

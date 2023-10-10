@@ -1,0 +1,540 @@
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* CSS styling for the navigation bar */
+.navbar-section {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 10px;
+    /* Add some space between the logo image and text */
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 38px;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.menu li::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #2E2E45;
+    transition: width 0.3s;
+}
+
+.menu li:hover::before,
+.menu li.active::before {
+    width: 100%;
+}
+
+.menu li:hover {
+    transform: scale(1.1);
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #333;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 800;
+
+}
+
+/* Add your other styles here */
+
+/* Styling for the user's name container on the right side */
+#user-name-container {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    background: #fff;
+
+    color: rgba(119, 119, 119, 0.47);
+    font-size: 16px;
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: 1000;
+    line-height: normal;
+    margin-left: auto;
+}
+
+/* Flexbox for the nav-menu-container */
+.nav-menu-container {
+    display: flex;
+    align-items: center;
+}
+
+
+.signup-btn {
+    color: #2E2E45;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 4px solid #2E2E45;
+    background: #28A745;
+    font-weight: 500;
+}
+
+.login-btn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    background: #fff;
+
+    color: rgba(119, 119, 119, 0.47);
+    font-size: 16px;
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: 1000;
+    line-height: normal;
+    margin-right: 30px;
+
+}
+
+button {
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.03);
+}
+
+/* End of navigation bar styling */
+
+/* CSS styling for the hero section */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    height: 100vh;
+}
+
+.content {
+    padding: 20px;
+    background-color: #2E2E45;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+
+
+    top: 252px;
+    left: 40px;
+
+}
+
+.hero h2 {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+h2 span.top {
+    display: block;
+}
+
+h2 span.bottom {
+    display: block;
+}
+
+.hero p {
+    font-size: 28px;
+    line-height: 1.5;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+    margin-right: 300px;
+    margin-left: 100px;
+}
+
+.browseopp-btn {
+    background: #E34C45;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.browseopp-btn:hover {
+    background-color: #b96170;
+}
+
+.joinus-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    background: #28A745;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.joinus-btn:hover {
+    background-color: #3e8e41;
+}
+
+
+
+.hero-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/* End of Hero Section Styling */
+
+/* How Volucare Works Styling */
+.how-it-works {
+    padding: 80px 140px;
+    height: 40vh;
+
+}
+
+.how-it-works h2 {
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #2E2E45;
+}
+
+.steps-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    margin: auto;
+}
+
+.steps-list li {
+    text-align: center;
+    flex-basis: 20%;
+}
+
+.step-icon {
+    font-size: 40px;
+    color: #E34C45;
+    margin-bottom: 10px;
+}
+
+.step-description h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2E2E45;
+}
+
+.step-description p {
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 700;
+    color: #2E2E45;
+}
+
+.how-it-works p {
+    font-size: 20px;
+}
+
+/* End of How Volucare Works Styling */
+
+/* Meet our Community Styling */
+.community-section {
+    text-align: center;
+    background-color: aliceblue;
+    padding: 50px;
+}
+
+.community-section h2 {
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #2E2E45;
+}
+
+.community-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.member-image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+    object-position: center;
+
+}
+
+.member-details {
+    margin-top: 10px;
+}
+
+.member-details h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.member-details .member-message {
+    font-style: italic;
+    color: #666;
+}
+
+
+/* End of Meet our Community Styling */
+
+/* Start of Why Get Involved Styling */
+
+.why-get-involved-section {
+    text-align: center;
+    padding: 50px;
+}
+
+.section-header {
+    font-size: 60px;
+    font-weight: normal;
+    color: #2E2E45;
+
+}
+
+.bold-why {
+    font-weight: bold;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 70px;
+}
+
+.card {
+    width: 500px;
+    padding: 60px;
+    border-radius: 50px;
+    background-color: aliceblue;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.card-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #2E2E45;
+}
+
+.card-description {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 45px;
+    font-weight: 500;
+}
+
+.card-button-signup {
+    background-color: #4CAF50;
+    color: #2E2E45;
+    padding: 15px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.card-button {
+    background-color: #E34C45;
+    color: #2E2E45;
+    padding: 15px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* End of Why Get Involved Styling */
+
+/* Start of Footer  */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2E2E45;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 40px;
+    flex: 1;
+}
+
+.footer-heading {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.footer-links {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-links li {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 10px;
+    font-size: 18px;
+    transition: transform 0.3s;
+}
+
+.footer-links li::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #E34C45;
+    transition: width 0.3s;
+}
+
+.footer-links li:hover::after {
+    width: 100%;
+}
+
+.footer-links li:hover {
+    transform: scale(1.1);
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #E34C45;
+    font-size: 30px;
+}
+
+.footer h3 {
+    font-size: 20px;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #ccc;
+    font-weight: 500;
+}
+
+/* End of Footer */
